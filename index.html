@@ -5,14 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="minireset.css" type="text/css">
     <style>
         body {
-            background: #222;
+            background: #444;
         }
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-template-rows: auto 1fr auto;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+
     </style>
 </head>
 <body>
-    <img src="images/logo.png" alt="google logo" width="320px">
-    
+    <div class="container">
+        <div class="nav_bar">
+            <p>navbar</p>
+        </div>
+        <div class="logo_section">
+                <img class="main_logo" src="images/logo.png" alt="google logo" width="320px">
+                <form>
+                    <input class="search" type="text" name="text_box"><br>
+                    <input type="button" name="search" value="Google Search">
+                    <input type="button" name="random_search" value="I'm Feeling Lucky">
+                </form>
+                <p>Google offered in: <a href="#">polski</a></p>
+        </div>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+
+
+   
+
 </body>
 </html>
