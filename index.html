@@ -96,43 +96,44 @@
         }
 
         footer {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            width: 100%;
             font-size: 20px;
             color: gray;
+            margin-top: 200px;
+            background: #f8f8f8;
+         
+            height: 135px;
         }
 
         footer ul, footer li {
+            padding: 14px;
             display: inline;
         }
 
         footer .footer_menu  {
-            grid-column: 1 / -1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            background: #f8f8f8;
-            width: 100vh;
+           
+            position: relative;
             padding: 14px;
         }
 
         .location {
             background: #f8f8f8;
             padding: 14px;
+            padding-left: 22px;
             border: 1px solid lightgray;
-            border-left: 0;
-            border-right: 0;
-            width: 100%;
-            display: block;
             text-align: left;
-            grid-column: 1 / -1;
             font-size: 18px;
             font-weight: 100;
         }
 
-        .about_menu a {
-            background: #f8f8f8;
+        .about_menu {
+            left: 0;
+            position: absolute;
+            
         }
         .term_menu {
+            right: 0;
+            position: absolute;
             
         }
 
