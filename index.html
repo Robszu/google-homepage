@@ -7,9 +7,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="minireset.css" type="text/css">
     <style>
-        body {
-            background: #444;
+        html {
+            font-family: Arial, Helvetica, sans-serif;
         }
+
+        body {
+            /* background: #444; */
+            
+        }
+        
         .container {
             display: grid;
             height: 100vh;
@@ -19,25 +25,153 @@
             text-align: center;
         }
         
+        .search {
+         width: 600px;
+         height: 47px;
+         margin: 30px;
+         -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+         -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+         box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+         background: url(images/microphone.png) no-repeat 555px;
+         background-size: 25px;
+        }
+
+        .search_btn {
+            color: gray;
+            padding: 12px 20px 12px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            background: #f8f8f8;
+            margin: 3px;
+            margin-bottom: 12px;
+            border: 0;
+            border-radius: 2px;
+        }
+        
+        .lang_offer {
+            font-size: 20px;
+        }
+        .lang_offer a {
+            text-decoration: none;
+        }
+
+        .nav_bar {
+            justify-self: right;
+            margin: 25px;
+        }
+
+        .nav_bar li {
+            display: inline-block;
+            padding: 8px;
+        }
+
+        .nav_bar li a {
+            text-decoration: none;
+            color: gray;
+            font-size: 14px;
+        }
+        .nav_bar li a:hover  {
+            text-decoration: underline;
+        }
+ 
+        .bell {
+            display: block;
+            background: gray;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            top: 33px;
+            right: 76px;
+            position: absolute;
+            } 
+        .nav_bar li .login {
+            display: block;
+            background: forestgreen;
+            font-size: 25px;
+            color: floralwhite;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            font-size: 20px;
+            color: gray;
+        }
+
+        footer ul, footer li {
+            display: inline;
+        }
+
+        footer .footer_menu  {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #f8f8f8;
+            width: 100vh;
+            padding: 14px;
+        }
+
+        .location {
+            background: #f8f8f8;
+            padding: 14px;
+            border: 1px solid lightgray;
+            border-left: 0;
+            border-right: 0;
+            width: 100%;
+            display: block;
+            text-align: left;
+            grid-column: 1 / -1;
+            font-size: 18px;
+            font-weight: 100;
+        }
+
+        .about_menu a {
+            background: #f8f8f8;
+        }
+        .term_menu {
+            
+        }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="nav_bar">
-            <p>navbar</p>
-        </div>
+        <nav class="nav_bar">
+            <ul>
+                <li><a href="#">Gmail</a></li>
+                <li><a href="#">Images</a></li>
+                <li><a href="#">square</a></li>
+                <li><a class="bell" href="#"><img src="images/bell.png" width="10px"></a></li>
+                <li><a class="login" href="#">R</a></li>
+            </ul>
+        </nav>
         <div class="logo_section">
                 <img class="main_logo" src="images/logo.png" alt="google logo" width="320px">
                 <form>
                     <input class="search" type="text" name="text_box"><br>
-                    <input type="button" name="search" value="Google Search">
-                    <input type="button" name="random_search" value="I'm Feeling Lucky">
+                    <input class="search_btn" type="button" name="search" value="Google Search">
+                    <input class="search_btn" type="button" name="random_search" value="I'm Feeling Lucky">
                 </form>
-                <p>Google offered in: <a href="#">polski</a></p>
+                <p class="lang_offer">Google offered in: <a href="#">polski</a></p>
         </div>
         <footer>
-            <p>footer</p>
+            <div class="location">Poland</div>
+            <div class="footer_menu">
+                <ul class="about_menu">
+                    <li>Advertising</li>
+                    <li>Business</li>
+                    <li>About</li>
+                </ul>
+                <ul class="term_menu">
+                    <li>Privacy</li>
+                    <li>Terms</li>
+                    <li>Settings</li>
+                </ul>
+            </div>
         </footer>
     </div>
 
