@@ -10,11 +10,6 @@
         html {
             font-family: Arial, Helvetica, sans-serif;
         }
-
-        body {
-            /* background: #444; */
-            
-        }
         
         .container {
             display: grid;
@@ -34,6 +29,7 @@
          box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
          background: url(images/microphone.png) no-repeat 555px;
          background-size: 25px;
+         padding: 12px;
         }
 
         .search_btn {
@@ -58,42 +54,45 @@
 
         .nav_bar {
             justify-self: right;
-            margin: 25px;
+            margin-top: 10px;
+            margin-bottom: 150px;
         }
 
         .nav_bar li {
-            display: inline-block;
             padding: 8px;
+            float: left;
         }
+
 
         .nav_bar li a {
             text-decoration: none;
             color: gray;
             font-size: 14px;
+            line-height: 40px;
+            display: inline-block;
+            
         }
         .nav_bar li a:hover  {
             text-decoration: underline;
         }
- 
-        .bell {
-            display: block;
-            background: gray;
-            width: 30px;
-            height: 30px;
+
+        li.images {
+            display: flex;
+            align-items: center;
+            clear: right;
+            
+        }
+        li.images a {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .login img {
             border-radius: 50%;
-            top: 33px;
-            right: 76px;
-            position: absolute;
-            } 
-        .nav_bar li .login {
-            display: block;
-            background: forestgreen;
-            font-size: 25px;
-            color: floralwhite;
             width: 40px;
             height: 40px;
-            border-radius: 50%;
-        }
+            
+        }    
 
         footer {
             width: 100%;
@@ -101,7 +100,6 @@
             color: gray;
             margin-top: 200px;
             background: #f8f8f8;
-         
             height: 135px;
         }
 
@@ -145,9 +143,9 @@
             <ul>
                 <li><a href="#">Gmail</a></li>
                 <li><a href="#">Images</a></li>
-                <li><a href="#">square</a></li>
-                <li><a class="bell" href="#"><img src="images/bell.png" width="10px"></a></li>
-                <li><a class="login" href="#">R</a></li>
+                <li class="images"><a class="apps" href="#"><img src="images/google-apps.png" width="25px"></a>
+                <a class="bell" href="#"><img src="images/bell.png" width="30px"></a>
+                <a class="login" href="#"><img src="images/photo.jpg" alt="user photo"></a></li>
             </ul>
         </nav>
         <div class="logo_section">
